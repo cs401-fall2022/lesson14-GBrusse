@@ -8,33 +8,93 @@
   </head>
 
   <body>
-    <center>
     <header>
+      <center>
         <h1>Brief explanation of TypeScript for JavaScript Programmers</h1>
+      </center>
     </header>
     <h2>Overview</h2>
     <p>
       TypeScript is similar to JavaScript in that they have the same features, 
-      but TypeScript then adds its own type system on top. JavaScript does not check for 
-      inconsistencies within assigned primitives, however TypeScript does.
+      but TypeScript then adds its own type system on top.<br> JavaScript does not check for 
+      inconsistencies within assigned primitives, however TypeScript does.<br>
     Hopefully by the end of this brief overview you will gain at least a working knowledge 
       of TypeScript and be able to start using it effectively.
     </p>
 
     <h2>Defining Types</h2>
+      <p>
+        Consider the following block of code:<br><br>
+        **picture of code** <br><br>
 
+        Using the syntax “user: User”, you declare that this JavaScript object conforms to the shape 
+        of the new interface.<br>
+        By putting the name in quotations (“Hayes”) you are assigning it as a string.<br>
+        The id is assumed to be a number since no quotations are used. (600 != “600”).<br><br>
+
+        When you are inconsistent, or just have an object that doesn’t match your provided interface, 
+        <br>you will get a warning that looks like this:<br><br>
+        **picture of code** <br><br>
+
+        TypeScript, like JavaScript, supports classes and OOP. You can use an interface declaration with 
+        classes like the below code block:<br><br>
+        **picture of code** <br><br>
+
+        Interfaces can also be used to annotate parameters and return values:<br><br>
+        **picture of code** <br><br>
+
+        TypeScript, as mentioned before, has all the features of JavaScript and then some. 
+        This extends to primitive types as well.<br> Every Type Script has all of the primitive 
+        types that are used within JavaScript then adds more.
+        This includes ‘any’(allows anything), <br>‘unknown’(ensure someone using this type 
+        declares what the type is), ‘never’(it’s not possible that this type could happen), 
+        and<br> ‘void’(a function which returns undefined or has no return value).
+      </p>
 
 
     <h2>Types by Inference</h2>
+    <p>
+      Inference “knows” the type of the variable being created. See the line of code:<br><br>
+      **picture of code**<br><br>
+      This is Types by Inference, TypeScript is inferring what is trying to be done. 
+      The ‘let’ keyword is used to declare a local variable,<br> then the name of the variable 
+      (helloWorld), and since “Hello World” is in quotations, TypeScript labels it as a string. 
+      As stated before, <br>inference means that 600 and “600” are seen as different variables and 
+      different variable types.<br><br>
+            let value = “600”<br>
+	          return value + 2<br><br>
 
-
-
+            let value = 600<br>
+	          return value + 2<br><br>
+            The first code block will, because of inference, return 6002. 
+            Whereas the bottom would return 602.
+    </p>
 
     <h2>Composing Types</h2>
-
+    <p>
+      TypeScript allows you to use <strong>unions</strong> or <strong>generics</strong> to combine simple types into more complex types.
+    </p>
     <h3>Unions</h3>
+    <p>
+      **picture of code**<br><br>
+      Here we see that a boolean is created without the term “boolean”. Just by using ‘ | ‘ in the
+	    “true | false;” is enough.<br> This type of union is commonly used to describe a set of string
+	    or number literals a value can be, for example:<br><br>
+      **picture of code**<br><br>
+      This can also be used for handling different types:<br><br>
+      **picture of code**<br><br>
+      Below is a table that shows the keyword “typeof”:<br><br>
+      **picture of code**<br><br>
+      This can be very useful when dealing with different variable types within a single
+	    function.<br><br>
+      **picture of code**<br><br>
+    </p>
 
     <h3>Generics</h3>
-  </center>
+    <p>
+      An array without generics could contain anything, whereas an array with generics can
+	    describe the values that the array contains.<br><br>
+      **picture of code**<br><br>**picture of code**<br><br>
+    </p>
   </body>
 </html>
