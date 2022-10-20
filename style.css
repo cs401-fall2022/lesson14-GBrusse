@@ -1,3 +1,9 @@
+/*
+Simple but timeless look. Doesn't try to do too much.
+Calm background, accent color to border images, and an easy to read font.
+Information is centered and has no distractions around it.
+*/
+
 html {
     max-width: 70ch;
     padding: 3em 1em;
